@@ -1,14 +1,15 @@
 import instance from ".";
 
-const getAllcategories = async () => {
+const getItems = async () => {
   try {
-    const response = await instance.get("/mini-project/api/categories/");
+    const response = await instance.get("/mini-project/api/items/");
     console.log(response.data);
-
     return response.data;
   } catch (error) {
     console.log(error);
   }
 };
 
-export { getAllcategories };
+
+
+export { getItems };
