@@ -5,7 +5,7 @@ const Itemcomponent = ({ item }) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("ProductDetails")}
+      onPress={() => navigation.navigate("ProductDetails", { id: item._id })}
       style={
         {
           // padding: 10,

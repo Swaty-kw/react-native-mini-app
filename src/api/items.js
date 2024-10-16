@@ -9,7 +9,13 @@ const getItems = async () => {
     console.log(error);
   }
 };
+const getItembyid = async (id) => {
+  try {
+    const response = await instance.get(`/mini-project/api/items/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-
-
-export { getItems };
+export { getItems, getItembyid };
